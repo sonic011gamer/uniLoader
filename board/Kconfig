@@ -7,10 +7,10 @@ menu "Device Support"
 		help
 		  Say Y if you want to include support for iPhone 6
 
-		config MICROSOFT_SAANA
+	config MICROSOFT_SAANA
 		bool "Support for Microsoft Lumia 650"
 		default n
-		depends on MICROSOFT_SAANA
+		depends on QUALCOMM_MSM8909
 		help
 		  Say Y if you want to include support for Lumia 650
 
