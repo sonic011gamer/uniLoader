@@ -366,6 +366,9 @@ uniLoader: $(uniLoader-all)
 	$(call if_changed,uniLoader)
 	@echo '  OBJCOPY $@'
 	$(OBJCOPY) -O binary uniLoader.o uniLoader
+ifdef CONFIG_MICROSOFT_SAANA
+	cp uniLoader.o emmc_appsboot.mbn
+endif
 
 # The actual objects are generated when descending, 
 # make sure no implicit rule kicks in
