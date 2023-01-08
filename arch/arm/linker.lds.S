@@ -1,6 +1,4 @@
-ifdef CONFIG_MICROSOFT_SAANA
 ENTRY(_start);
-endif
 
 OUTPUT_FORMAT("elf32-littlearm")
 OUTPUT_ARCH(arm)
@@ -11,10 +9,8 @@ INPUT(DTB_PATH)
 
 SECTIONS
 {
-	ifdef CONFIG_MICROSOFT_SAANA
         _start = 0x80200000;
         . = 0x80200000;
-	endif
 	
         .boot : {
                 arch/arm/Start.o
